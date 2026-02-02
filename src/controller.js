@@ -181,7 +181,7 @@ class Controller {
         // If the last active route isn't "All", or we're switching routes, we
         // re-create the todo item elements, calling:
         //   this.show[All|Active|Completed]()
-        if (force || this._lastActiveRoute !== "All" || this._lastActiveRoute !== activeRoute)
+        if (force || this._lastActiveRoute !== "All" && this._lastActiveRoute !== activeRoute)
             this[`show${activeRoute}`]();
 
         this._lastActiveRoute = activeRoute;
